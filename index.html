@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lecturas Del Alma</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/solution.css">
+
+
+  <script>
+          let clickCount_2 = 0;
+
+            let clickCount_1 = 0;
+    // Function to open the image popup
+      function openImagePopup(imageUrl) {
+        clickCount_1++;
+
+     // Check if the button has been clicked three times
+      if (clickCount_1 === 2) {
+        const popup = document.getElementById('imagePopup');
+        popup.style.display = 'block';
+        clickCount_1 = 0; // Reset click count
+      }
+
+        // const id = ""
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+
+        // Set the image source to the desired image URL
+          // const imageUrl = './images/CartaLink_Contenido.jpg';
+
+        modalImage.src = imageUrl;
+        modal.style.display = 'block';
+      }
+
+      // Function to close the image popup
+      function closeImagePopup() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+      }
+
+      // Code for Upsell
+
+      let clickCount = 0;
+
+    // Function to open the image popup
+    function openImagePopup_upsell() {
+      clickCount++;
+
+      // Check if the button has been clicked three times
+      if (clickCount === 2) {
+        const popup = document.getElementById('imagePopup');
+        popup.style.display = 'block';
+        clickCount = 0; // Reset click count
+      }
+    }
+
+    // Function to close the image popup
+    function closeImagePopup_upsell() {
+      const popup = document.getElementById('imagePopup');
+      popup.style.display = 'none';
+    }
+
+    // Function to open an external link in a new window
+    function openExternalLink() {
+      window.open('https://bit.ly/almayvidaplenas_vsl', '_blank');
+    }
+
+  </script>
+
+<style>
+  /* Add CSS styles for the popup */
+  .popup {
+    display: none;  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+  }
+
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+  }
+</style>
+
+</head>
+
+<body>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary gradient-background"> 
+        <div class="container-fluid"  >
+
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Button to trigger the popup -->
+      <!-- <button id="popupButton" onclick="openImagePopup_upsell()">Open Image Popup</button> -->
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 170px;  padding-right:0px;  padding-top:10px">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0"  style="left: 100px">
+          <!-- <div class="navbar-nav"  style="left: 80px"></div> -->
+          <img src="./images/Logo_LDA_Color.png" alt="Bootstrap" width="55" height="55">
+          <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Contenido.png')">Contenido</a>
+          <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Reflexion.png')">Reflexión</a>
+          <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Meridiano.png')">Meridiano</a>
+          <!-- <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Meridiano2.jpg')">Meridiano</a> -->
+          <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Limpieza.png')">Limpieza - purificación </a>
+          <!-- <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Limpieza2.jpg')">Limpieza - purificación </a> -->
+          <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_Afirmacion.png')">Afirmación</a>
+          <a class="nav-link" href="#" onclick="openImagePopup('./images/CartaLink_musica.png')">Música</a>
+    
+         </div>
+
+        <!-- Modal or Lightbox container -->
+          <div id="imageModal" class="modal">
+            <span class="close" onclick="closeImagePopup()">&times;</span>
+            <img id="modalImage" class="modal-content">
+          </div>
+      
+      </div>
+    </div>
+  </nav>
+
+
+      <!-- Title -->
+      <section id="title" class="gradient-background section" >
+
+        <div class="container col-xxl-8 px-4" style="padding-top: 0px">
+          <div class="row flex-lg-row-reverse align-items-center g-5" >
+
+            <div class="col-lg-6" style="margin-top: 0px; padding-top: 0;">
+              <h1><strong>Lecturas Del Alma</strong></h1>
+              <h2><strong>Oráculo</strong>  </h2>
+
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+
+                  <button type="button"  onclick="gotoNewPage(1)" class="btn btn-outline-light btn-lg px-4 me-md-2" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16"> <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/> </svg> Escoge tu Carta</button>
+                  <!-- <input type="text" id="nameInput"  style="color: black;" placeholder="Carta No.= ">
+                  <button id="submitButton">Digite Enter</button> -->
+                  
+
+              </div>
+            </div>
+            <div class="col" style="
+              padding-left: 50px;
+              padding-right: 50px;
+              padding-bottom: 50px;">  
+              <img src="./images/Lecturas_del_Alma_mockuo_2.jpg" class="d-block mx-lg-auto img-fluid" style="border-radius: 5%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" alt="Lecturas del alma cartas" height="100"
+                loading="lazy">
+                <!-- <img src="./images/lecturas_del_Alma_mockup.jpg" class="d-block mx-lg-auto img-fluid" style="border-radius: 5%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" alt="Lecturas del alma cartas" height="100"
+                loading="lazy"> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="one" class="main style1 section" style="
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 5;">
+        <div class="container vh-50">
+          <div class="row gtr-150">
+            <div class="col col-12-medium">
+              <header class="major">
+                <h2>LECTURAS DEL ALMA  </h2>
+                <p class="text-black"> -Versión Básica- </p>
+                <p class="text-black">es tu: <b class="text-black">¡Oráculo personal!</b> </p>
+                
+              </header>
+              <p class="text-black">¿Alguna vez te has preguntado quién eres en realidad? <br />¿Te gustaría encontrar tu camino de desarrollo personal y emocional? <br />¡Entonces te tenemos una solución!
+
+                <br />Con nuestras cartas, podrás descubrir qué te está impidiendo avanzar en tu vida. <br />Cada carta tiene una energía y un significado particular que te ayudará a resolver tus dudas, indecisiones o dificultades. <br />¡Te darán la claridad que necesitas para entender lo que está sucediendo en tu vida!
+
+                <br />Y lo mejor de todo, es que todo comienza descubriendo tu luz, la energía del creador que está dentro de ti.<br />A partir de ahí, alcanzarás la plenitud del amor, la paciencia, la paz y la claridad para comprender desde tu interior que siempre estás en movimiento y que siempre tendrás la fuerza para sobrellevar cualquier evento o reto que se te presente.
+
+                <br />Cada día, nuestras lecturas te ofrecen la oportunidad de conectarte con tu ser interior y encontrar la guía y el apoyo que necesitas para alcanzar la realización personal y la felicidad. <br />¡Únete a nuestra comunidad hoy mismo y comienza tu viaje hacia la transformación personal!
+                <br /><br />Bienvenidos!</p>
+
+            </div>
+            <!-- <div class="col-6 col-12-medium imp-medium">
+              <span class="image fit"><img src="static/images/Lecturas_del_Alma_mockup.jpg" alt="" /></span>
+
+            </div> -->
+          </div>
+        </div>
+      </section>
+  <div >
+      <!-- <div class="divider"></div> -->
+
+            <!-- One_1 -->
+      <section id="one_1" class="main style2 section" style="
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-top: 50px; ">
+              <div class="container">
+                <div class="row gtr-150">
+                      <div class="col">
+                      <header class="major">
+                        <h2>Instrucciones</h2>
+                      </header>
+                      <p class="text-wrap" style="font-size:110%;text-align:left; margin-bottom: 0px;">
+                        Antes de comenzar tu consulta de manera amorosa y regalarte un momento de interiorización para resolver tu interrogante, o consultar tu carta del día, te recomiendo seguir estos pasos (lee la preparación antes de iniciar):
+                        <p style="padding-left: 50px; margin-bottom: 0px;"> <br>1.	Encuentra un ambiente tranquilo donde no seas interrumpido. Busca un lugar donde te sientas cómodo y relajado, y donde puedas sumergirte en tu proceso de consulta sin distracciones.</p>
+                        <p style="padding-left: 50px; margin-bottom: 0px;"> <br>2.	Cierra suavemente los ojos y comienza a sintonizarte contigo mismo. Toma conciencia de tu cuerpo, de tu respiración y de las sensaciones que experimentas en este momento presente.</p>
+                        <p style="padding-left: 50px; margin-bottom: 0px;"> <br>3.	Respira profundamente. Inhala lentamente por la nariz, permitiendo que el aire llene tus pulmones. Luego, exhala suavemente por la boca, liberando cualquier tensión o preocupación que puedas tener. Repite este proceso de respiración profunda varias veces, permitiéndote relajarte y entrar en un estado de calma</p>
+                        <p style="padding-left: 50px; margin-bottom: 0px;"> <br>4.	Así mismo, tómate un momento para conectarte con tu cuerpo y prestar atención a las sensaciones que puedas experimentar. Si sientes que tu cuerpo está pesado o estresado, te invito a utilizar la respiración como una herramienta de liberación y transformación.
+                          <br><br>Imagina que estás cogiendo una carga simbólica que se encuentra sobre tu cuerpo. Al inhalar profundamente, visualiza cómo retiras esa carga, permitiendo que se eleve y se separe de ti. Siente cómo tu cuerpo se aligera y se libera de esa pesadez.
+                          <br><br>Luego, al exhalar suavemente, entrega completamente esa carga a la Madre GAIA, la Tierra, quien gentilmente la recibe y la transmuta en energía amorosa. Agradece a la Madre GAIA por su colaboración en este proceso de liberación y transformación.
+                          </p>
+                        <p style="padding-left: 50px; margin-bottom: 0px;"> <br>5.	Ahora, dirige tu atención hacia tu interrogante o tema de consulta. Permítete estar presente con esa pregunta en tu mente, sin buscar una respuesta inmediata. Observa cómo se siente en tu interior, cómo resuena en tu ser.
+                          <br><br>Mantén una actitud de apertura y receptividad. Deja a un lado cualquier expectativa o juicio sobre lo que debería ser la respuesta. Permite que la sabiduría y la intuición surjan desde lo más profundo de tu ser.
+                          
+                          <br><br>Agradece por la oportunidad de explorar este tema a través de la consulta de las cartas “Lecturas del Alma”. Cultiva un sentimiento de gratitud por el proceso y por el crecimiento que estás a punto de experimentar.
+                          </p>
+                        <p style="padding-left: 50px; margin-bottom: 0px;"><br>6.	Una vez que hayas completado estos pasos, estarás en un estado de mayor calma, atención plena y disposición para comenzar tu consulta de manera amorosa. Recuerda que este es un tiempo dedicado a ti mismo, a tu crecimiento y desarrollo personal. Disfruta de este momento y permítete recibir las respuestas y la guía que necesitas.
+                          <br><br>Lee la carta seleccionada tres veces seguidas, haciendo una pausa entre cada lectura para poder interiorizar su mensaje.
+                          </p>
+                                          
+                        
+                        <br> <h4>Selecciona tu carta, presionando el botón arriba. </h4>
+                        <p>
+                        <br>&#8226 Si por alguna razón no entiendes, no te gusta o te molesta la respuesta, date tiempo para respirar y soltar cualquier interpretación. Pregúntate si es posible que la respuesta no sea lo que esperabas, recuerda que es lo que necesitas en este momento de tu vida, no necesariamente lo que crees que debería ser.
+                        <br><br>&#8226 Comprende esto y vuelve a leer la carta amorosamente, sin juzgar, con una sonrisa y agradecimiento, reconociendo que lo que te dice es lo que necesitas en este momento de tu vida.
+                        <br><br>&#8226 Siéntelo y practica esta enseñanza, regalándote a ti mismo este momento de crecimiento.
+                        <br><br>&#8226 Recuerda que cada paso está diseñado para ayudarte a conectarte con tu interior y recibir las respuestas y enseñanzas que necesitas en este momento. 
+                        <br><br>&#8226 Disfruta alegremente esa enseñanza.
+                        
+                      </p>
+                    </div>
+                  </div>
+                <!-- </div> -->
+      </section>
+  
+  </div>        
+
+  <!-- Popup window -->
+  <div id="imagePopup" class="popup">
+    <div class="popup-content">
+      <!-- Image with size parameters -->
+      <img id="popupImage" src="./images/Popup-Upsell-Thumbnail.png" alt="Popup Image" width="650" height="400">
+
+      <!-- Button to open an external link in a new window -->
+      <button onclick="openExternalLink()"  style="background-color: darkgreen; color: white; margin-top: 20px; margin-bottom: 20px;">Deseo unirme a Membresía PREMIUM</button>
+      <br>
+
+      <!-- Text link to close the popup -->
+      <a href="#" onclick="closeImagePopup_upsell()" style="color: darkblue;">No quiero esto, regresar a las 6 cartas.</a>
+
+    </div>
+  </div>
+  
+  <section id="upsel" class="main style1 section" style="
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5;">
+    <div class="container vh-50">
+      <div class="row gtr-150">
+        <div class="col col-12-medium">
+          <header class="major">
+            <h2>LECTURAS DEL ALMA</h2>
+            <h4>Versión Básica</h4>
+          </header>
+          <p class="text-black">¿Quieres disfrutar la versión PREMIUM? <br />
+            <p class="text-black">Son en total 74 cartas<br />
+            <p class="text-black">Dale Click al botón <br />
+              
+      <!-- Button to trigger the popup -->
+      <!-- <button id="popupButton" style="background: green; color:white" onclick="openImagePopup_upsell()">Quiero la versión PREMIUM!</button> -->
+
+      <button onclick="openExternalLink()"  style="background-color: darkgreen; color: white; margin-top: 20px; margin-bottom: 20px;">Deseo unirme a Membresía PREMIUM</button>
+
+        </div>
+        <!-- <div class="col-6 col-12-medium imp-medium">
+          <span class="image fit"><img src="static/images/Lecturas_del_Alma_mockup.jpg" alt="" /></span>
+
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <section id="contact" class="gradient-background">
+    <div class="container ">
+
+      <footer class="py-3 my-4 text-white">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Inicio</a></li>
+          <li class="nav-item"><a href="#one_1" class="nav-link px-2 text-white">Instrucciones</a></li>
+
+        </ul>
+        <p class="text-center text-white">Derechos de Author ©Lecturas Del Alma</p>
+      </footer>
+
+    </div>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
